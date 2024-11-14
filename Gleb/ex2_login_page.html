@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			h2 {
+				font-family: "Segoe UI";
+				font-weight: bold;
+				font-size: 25px;
+			}
+			.background-container {
+				height: 100vh;
+				width: 100vw;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.sign-in-container {
+				width: 400px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.sign-in-container label {
+				position: absolute;
+				top: -6px;
+				left: 58px;
+				background-color: white;
+				font-size: small;
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+			.sign-in-container button {
+				background-color: black;
+				color: white;
+				width: 75%;
+				height: 30px;
+			}
+
+			.floating-label-input {
+				position: relative;
+				width: 100%;
+				text-align: center;
+			}
+			.input-field {
+				width: 276px;
+				border-radius: 4px;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+			.continue-with-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 220px;
+				height: 35px;
+				border-style: groove;
+				margin-bottom: 3px;
+			}
+			.logo {
+				height: 16px;
+				margin-left: 0px;
+				margin-right: 10px;
+			}
+			.link {
+				color: #000;
+			}
+			.separator {
+				border-top: 1px solid black;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				width: 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+			}
+			.text-separator {
+				position: absolute;
+				top: -23px;
+				background-color: white;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="background-container">
+			<div class="sign-in-container">
+				<h2>Sign in</h2>
+				<p>Please enter your email to sign in.</p>
+				<div class="floating-label-input">
+					<label for="email">Email</label>
+					<input class="input-field" />
+				</div>
+				<button>Continue</button>
+				<div class="separator">
+					<div class="text-separator"><p>or</p></div>
+				</div>
+				<div class="continue-with-container">
+					<img
+						class="logo"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/900px-Facebook_Logo_2023.png?20231011121526"
+						alt="Facebook Logo"
+					/>
+					<p>Continue with Facebook</p>
+				</div>
+				<div class="continue-with-container">
+					<img
+						class="logo"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/732px-Apple_logo_black.svg.png"
+						alt="Apple Logo"
+					/>
+					<p>Continue with Apple</p>
+				</div>
+				<div class="continue-with-container">
+					<img
+						class="logo"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1557px-Logo_of_Twitter.svg.png"
+						alt="Twitter logo"
+					/>
+					<p>Continue with Twitter</p>
+				</div>
+				<div class="continue-with-container">
+					<img
+						class="logo"
+						src="https://images.opencollective.com/bloomberg-foss-fund/a446193/logo/256.png?height=256"
+						alt="BBA logo"
+					/>
+					<p>Continue with BBA</p>
+				</div>
+				<p>
+					Dont have and account?
+					<a class="link" href="www.google.com">Create one</a>
+				</p>
+				<a class="link" href="">Need help?</a>
+			</div>
+		</div>
+	</body>
+</html>
