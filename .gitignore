@@ -2,7 +2,7 @@
 node_modules/
 
 #ignore html-css-din24s repo
-din24-html-css
+din24-html-css/
 
 # Logs
 logs/
