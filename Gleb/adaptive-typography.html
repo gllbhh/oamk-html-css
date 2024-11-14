@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adaptive Typography</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			html {
+				font-size: 12px;
+			}
+			p {
+				font-size: 1rem;
+			}
+			h1 {
+				font-size: 1.5rem;
+			}
+			h2 {
+				font-size: 1.25rem;
+			}
+
+			@media only screen and (min-width: 600px) {
+				p {
+					font-size: 1.25rem;
+				}
+				h1 {
+					font-size: 1.75rem;
+				}
+				h2 {
+					font-size: 1.5rem;
+				}
+			}
+
+			@media only screen and (min-width: 900px) {
+				p {
+					font-size: 1.5rem;
+				}
+				h1 {
+					font-size: 2rem;
+				}
+				h2 {
+					font-size: 1.75rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>Responsive Typography</h1>
+
+			<p>
+				In this exercise, you will adjust the font size of headers and
+				paragraphs to enhance readability on larger screens.
+			</p>
+
+			<h2>Instructions:</h2>
+			<ul>
+				<li>
+					<p>
+						Begin with styles suitable for small screens and progressively
+						increase font sizes as the screen width expands. The initial
+						paragraph font size should be 1rem, then 1.25rem, then finally 1.5
+						rem.
+					</p>
+				</li>
+				<li>
+					<p>
+						Utilize media queries for a minimum width at breakpoints of 600px
+						and 900px.
+					</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

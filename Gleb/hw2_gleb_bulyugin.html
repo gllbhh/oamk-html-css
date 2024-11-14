@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+				height: 100%;
+			}
+			a {
+				color: black;
+				text-decoration: none;
+			}
+			button {
+				height: 50px;
+				border-radius: 8px;
+			}
+			.getstarted-button:hover {
+				cursor: pointer;
+				border-radius: 0%;
+			}
+			.login-button:hover {
+				cursor: pointer;
+				border-radius: 0%;
+			}
+			.top-menu-item:hover {
+				text-decoration: underline;
+			}
+			.main-container {
+				display: flex;
+				flex-direction: column;
+				width: 100vw;
+				height: 100vh;
+			}
+			.header {
+				width: 100%;
+				min-height: 85px;
+				background-color: white;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.top-menu {
+				display: flex;
+				align-items: center;
+				margin-left: 15px;
+				font-family: var(
+					--f-font-sans,
+					"__figmaSans_a26a19",
+					"__figmaSans_Fallback_a26a19",
+					SF Pro Display,
+					system-ui,
+					helvetica,
+					sans-serif
+				);
+				font-size: 1.125rem;
+				line-height: 1.4;
+				font-weight: 450;
+			}
+			.figma-icon {
+				margin-left: 135px;
+				height: 40px;
+			}
+			.login-button {
+				background-color: white;
+				border: 1px solid;
+				min-width: 100px;
+				margin-left: 15px;
+				font-family: var(
+					--f-font-sans,
+					"__figmaSans_a26a19",
+					"__figmaSans_Fallback_a26a19",
+					SF Pro Display,
+					system-ui,
+					helvetica,
+					sans-serif
+				);
+				font-optical-sizing: auto;
+				font-size: 1.125rem;
+				line-height: 1.4;
+				letter-spacing: -0.005625rem;
+				font-weight: 600;
+			}
+			.getstarted-button {
+				background-color: black;
+				border: none;
+				color: white;
+				min-width: 200px;
+				margin-left: 10px;
+				margin-right: 150px;
+				box-shadow: none;
+				font-family: var(
+					--f-font-sans,
+					"__figmaSans_a26a19",
+					"__figmaSans_Fallback_a26a19",
+					SF Pro Display,
+					system-ui,
+					helvetica,
+					sans-serif
+				);
+				font-optical-sizing: auto;
+				font-size: 1.125rem;
+				line-height: 1.4;
+				letter-spacing: -0.005625rem;
+				font-weight: 600;
+			}
+			.content {
+				background-color: #f3ffe3;
+				width: 100%;
+				box-sizing: border-box;
+				padding-left: 150px;
+			}
+
+			.header-text {
+				font-family: var(
+					--f-font-sans,
+					"__figmaSans_a26a19",
+					"__figmaSans_Fallback_a26a19",
+					SF Pro Display,
+					helvetica
+				);
+				min-width: 900px;
+				width: 1000px;
+				line-height: 1.1;
+				letter-spacing: -0.1rem;
+				font-size: 3.5rem;
+			}
+			.img-navbar {
+				display: flex;
+				margin-bottom: 30px;
+				padding-right: 200px;
+			}
+			.img-navbar-text {
+				font-family: var(
+					--f-font-mono,
+					"__figmaMono_16ac6d",
+					"__figmaMono_Fallback_16ac6d",
+					SF Mono,
+					menlo,
+					monospace
+				);
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 20px;
+			}
+			.image-box {
+				display: flex;
+				overflow: hidden;
+				justify-content: space-between;
+			}
+			.image-container {
+				flex: 1;
+				margin-right: 35px;
+				font-family: var(
+					--f-font-sans,
+					"__figmaSans_a26a19",
+					"__figmaSans_Fallback_a26a19",
+					SF Pro Display,
+					system-ui,
+					helvetica,
+					sans-serif
+				);
+				font-weight: 320;
+				line-height: 1.35;
+				font-size: 20px;
+				padding-bottom: 100px;
+			}
+			.myimg {
+				width: 100%;
+			}
+			.link {
+				color: black;
+				text-decoration: underline;
+			}
+			.button-group {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 110px;
+				padding-left: 30px;
+				margin-left: auto;
+			}
+			.button {
+				height: 50px;
+				width: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				background-color: #f3ffe3;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+			}
+			.button-inactive {
+				background-color: rgba(0, 0, 0, 0.1);
+				border: none;
+			}
+			.svg-arrow {
+				height: 70px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="header">
+				<div class="top-menu">
+					<!--Figma Icon copied from source of Figma.com-->
+					<svg
+						class="figma-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						width="33"
+						height="49"
+						fill="none"
+						viewBox="0 0 33 49"
+						aria-label="Homepage"
+						class="css-7vzs6a"
+					>
+						<path
+							fill="#00B6FF"
+							d="M16.5 23.612a7.28 7.28 0 0 1 7.28-7.279h1.053a8.167 8.167 0 1 1 0 16.333H23.78a7.28 7.28 0 0 1-7.279-7.279z"
+						></path>
+						<path
+							fill="#24CB71"
+							d="M0 40.834a8.167 8.167 0 0 1 8.167-8.167H16.5v8.083c0 4.557-3.735 8.25-8.292 8.25C3.698 49 0 45.344 0 40.834"
+						></path>
+						<path
+							fill="#FF7237"
+							d="M16.5 0v16.333h8.333a8.167 8.167 0 1 0 0-16.333z"
+						></path>
+						<path
+							fill="#FF3737"
+							d="M0 8.166a8.167 8.167 0 0 0 8.167 8.167H16.5V0H8.167A8.167 8.167 0 0 0 0 8.166"
+						></path>
+						<path
+							fill="#874FFF"
+							d="M0 24.5a8.167 8.167 0 0 0 8.167 8.167H16.5V16.334H8.167A8.167 8.167 0 0 0 0 24.5"
+						></path>
+					</svg>
+					<div class="top-menu">
+						<div class="top-menu">
+							<p class="top-menu-item"><a href="">Products</a></p>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="none"
+								viewBox="0 0 24 24"
+								style="transform: rotate(0)"
+								class="css-12q6f3t"
+							>
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M18.424 9.424 12 15.85 5.575 9.424l.849-.848L12 14.152l5.575-5.576z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</div>
+						<div class="top-menu">
+							<p class="top-menu-item"><a href="">Solutions</a></p>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="none"
+								viewBox="0 0 24 24"
+								style="transform: rotate(0)"
+								class="css-12q6f3t"
+							>
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M18.424 9.424 12 15.85 5.575 9.424l.849-.848L12 14.152l5.575-5.576z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</div>
+						<div class="top-menu">
+							<p class="top-menu-item"><a href="">Community</a></p>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="none"
+								viewBox="0 0 24 24"
+								style="transform: rotate(0)"
+								class="css-12q6f3t"
+							>
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M18.424 9.424 12 15.85 5.575 9.424l.849-.848L12 14.152l5.575-5.576z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</div>
+						<div class="top-menu">
+							<p class="top-menu-item"><a href="">Resourses</a></p>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="none"
+								viewBox="0 0 24 24"
+								style="transform: rotate(0)"
+								class="css-12q6f3t"
+							>
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M18.424 9.424 12 15.85 5.575 9.424l.849-.848L12 14.152l5.575-5.576z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</div>
+						<div class="top-menu">
+							<p class="top-menu-item"><a href="">Pricing</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="top-menu">
+					<div><a class="top-menu-item" href="">Contact sales</a></div>
+					<button class="login-button">Log in</button>
+					<button class="getstarted-button">Get started for free</button>
+				</div>
+			</div>
+			<div class="content">
+				<p class="header-text">
+					<b>Bring design and dev together. </b>Easily translate designs into
+					code with a workflow built for developers.
+				</p>
+				<div class="img-navbar">
+					<span class="img-navbar-text">1/4</span>
+					<div class="button-group">
+						<button class="button">
+							<svg
+								class="svg-arrow"
+								xmlns="http://www.w3.org/2000/svg"
+								width="30"
+								height="30"
+								fill="none"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M11.478 4.25 4 12l7.478 7.75.733-.709L5.91 12.51H20v-1.02H5.91l6.301-6.531z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+						<button class="button button-inactive">
+							<svg
+								class="svg-arrow"
+								xmlns="http://www.w3.org/2000/svg"
+								width="30"
+								height="30"
+								fill="none"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M12.522 4.25 20 12l-7.478 7.75-.733-.709 6.302-6.531H4v-1.02h14.09L11.79 4.959z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="image-box">
+					<div class="image-container">
+						<img
+							class="myimg"
+							src="https://cdn.sanity.io/images/599r6htc/regionalized/ed6e1575c8d6883805697d4c1520fb30973d6dc5-1200x800.png?rect=1,0,1199,800&w=700&h=467&q=75&fit=max&auto=format&dpr=2"
+							alt="icons and libraries"
+						/>
+						<p>
+							<b>Design systems that scale.</b> Streamline the product
+							development process with a design system that's aligned across
+							design and code.
+						</p>
+						<a class="link" href="https://www.figma.com/design-systems/"
+							>Learn about design systems</a
+						>
+					</div>
+					<div class="image-container">
+						<img
+							class="myimg"
+							src="https://cdn.sanity.io/images/599r6htc/regionalized/2bf04a9f99c999738ebcd55cc65e5def56a02140-1320x880.png?rect=1,0,1319,880&w=700&h=467&q=75&fit=max&auto=format&dpr=2"
+							alt="inspect feature with code preview"
+						/>
+						<p>
+							<b>Keep design and code connected.</b> Bring your component code
+							into Dev Mode so developers get the right code, every time.
+						</p>
+						<a class="link" href="https://www.figma.com/dev-mode/">
+							Learn about Dev Mode</a
+						>
+					</div>
+					<div class="image-container">
+						<img
+							class="myimg"
+							src="https://cdn.sanity.io/images/599r6htc/regionalized/63ff8af488b86fc9b967adaf88584fbbbc2d8cc6-1320x880.png?rect=1,0,1319,880&w=700&h=467&q=75&fit=max&auto=format&dpr=2"
+							alt="ready for dev preview"
+						/>
+						<p>
+							<b>Design systems that scale.</b> Streamline the product
+							development process with a design system that's aligned across
+							design and code.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

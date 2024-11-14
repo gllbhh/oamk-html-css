@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bavid Dowie - Nature</title>
+		<style>
+			body {
+				padding-top: 70px;
+				font-family: Arial, sans-serif;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				margin: 0;
+				background-color: #332f2f;
+				color: #fff;
+			}
+			.gallery-container {
+				text-align: center;
+				width: 100%;
+				max-width: 80%;
+			}
+			.gallery-image {
+				max-width: 100%;
+				max-height: 85%;
+				height: auto;
+				border-radius: 10px;
+				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+				opacity: 0;
+				transition: opacity 0.5s ease-in-out;
+			}
+			.gallery-image.show {
+				opacity: 1;
+			}
+			.navigation-buttons {
+				position: fixed;
+				bottom: 20px;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+			.navigation-buttons button {
+				padding: 10px 20px;
+				font-size: 24px;
+				cursor: pointer;
+				border: none;
+				border-radius: 5px;
+				color: #fff;
+				background-color: rgba(255, 255, 255, 0.164);
+				transition: background-color 0.3s;
+				margin: 0 20px;
+			}
+			.navigation-buttons button:hover {
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="gallery-container">
+			<img id="galleryImage" class="gallery-image" src="" alt="Photo Gallery" />
+		</div>
+
+		<div class="navigation-buttons">
+			<button onclick="prevImage()">←</button>
+			<button onclick="nextImage()">→</button>
+		</div>
+
+		<script>
+			// Array of image URLs
+			const images = [
+				"https://images.pixieset.com/48786303/980ae2ce17f80e61bc3d8338e842895e-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/99ae608f8c867cf642ee9b0c99654882-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/027dbb13e775500d3219f630d0fc62ec-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/cc6baffaf6b4e1b6857d321fbb23b59c-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/1c4ca71a33a2c1b87ee16d8c19be18d7-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/98ae8453f29e62dfe089592bc8166e2a-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/5bff66ea1f1d079ea98c9ba6eceb058f-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/e3b9d58f106ea60c2a403204e320cd51-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/fb2b42b68e638eb28ff8caeb27110380-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/28cec7ef9e8dfaea91f998bd7496f98f-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/a25ae92edb9ca48d62514d50671a6bf7-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/c015687b42b563661a35848daeccb920-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/5a6e3fbbb01fdcb82cf3c26e0e5704c8-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/bb2c2899638346b39a4a301a32ce2f73-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/8f5218a4c0caaa3532d6adbdfd1cd1f4-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/73bc0f50c87e123945412d376aa0263b-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/15ba01e0a389ed1245282f6235ab2bd3-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/d66d4bb111ed98a0f39405f933ee170b-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/e75e43dbc8fc36884192dc9abf68a4b2-xxlarge.JPG",
+				"https://images.pixieset.com/48786303/f2f6ad3cf6f773939bc1751159fb06aa-xxlarge.JPG",
+				"https://images.pixieset.com/48786303/5fee249f583b4d5ad01df8adf5048ecb-xxlarge.jpg",
+				"https://images.pixieset.com/48786303/adc55d97a4bb9b68a70124d0ef57207c-xxlarge.jpg",
+			];
+
+			let currentIndex = 0;
+
+			// Function to show the current image with fade-in effect
+			function showImage() {
+				const galleryImage = document.getElementById("galleryImage");
+				galleryImage.classList.remove("show"); // Remove the class to reset opacity
+				setTimeout(() => {
+					galleryImage.src = images[currentIndex]; // Change the image source
+					galleryImage.classList.add("show"); // Add the class back to trigger fade-in
+				}, 100); // Small delay to allow opacity reset
+			}
+
+			// Show the initial image
+			showImage();
+
+			// Function to show the next image
+			function nextImage() {
+				currentIndex = (currentIndex + 1) % images.length; // Loop to the beginning
+				showImage();
+			}
+
+			// Function to show the previous image
+			function prevImage() {
+				currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the end
+				showImage();
+			}
+		</script>
+	</body>
+</html>
